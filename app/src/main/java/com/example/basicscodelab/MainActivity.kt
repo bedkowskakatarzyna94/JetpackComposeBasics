@@ -76,15 +76,6 @@ private fun Greetings(names: List<String> = List(1000) { "$it" }) {
     }
 }
 
-@Preview(showBackground = true, widthDp = 320, heightDp = 320, uiMode = UI_MODE_NIGHT_YES)
-@Preview(showBackground = true, widthDp = 320, heightDp = 320)
-@Composable
-fun OnboardingPreview() {
-    BasicsCodelabTheme {
-        OnboardingScreen(onContinueClicked = {})
-    }
-}
-
 @Composable
 private fun Greeting(name: String) {
     Card(
@@ -144,7 +135,6 @@ private fun CardContent(name: String) {
 
 @Preview(
     showBackground = true,
-    widthDp = 320,
     uiMode = UI_MODE_NIGHT_YES,
     name = "DefaultPreviewDark"
 )
@@ -154,5 +144,13 @@ private fun CardContent(name: String) {
 fun DefaultPreview() {
     BasicsCodelabTheme {
         Greetings()
+    }
+}
+
+@Preview
+@Composable
+fun OnboardingPreview() {
+    BasicsCodelabTheme {
+        OnboardingScreen(onContinueClicked = {})
     }
 }
